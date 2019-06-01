@@ -27,7 +27,7 @@ class Window(tkinter.Tk):
         ##if null, set to index
         self.__screen_titles.append(title)
 
-    def load_screen(self, index, title):
+    def load_screen(self, index=None, title=None):
         previous_screen = self.__screens[self.__current_screen]
         previous_screen.pack_forget()
         ##
@@ -40,3 +40,6 @@ class Window(tkinter.Tk):
 
     def render(self):
         self.mainloop()    
+
+    def get_screen_function(self, index):
+        return lambda: self.load_screen(index=index)
