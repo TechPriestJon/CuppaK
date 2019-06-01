@@ -1,14 +1,10 @@
 import tkinter
+from tkinter import ttk
 
-class GridWindow(tkinter.Tk):
-    def __init__(self, width, height, title, columns, rows):
-        super().__init__()   
+class Screen(ttk.Frame):
+    def __init__(self, window, columns, rows):
+        super().__init__(window)   
         self.__components = []     
-        self.title(title)
-        self.__width = width
-        self.__height = height
-        self.geometry(str(width) + 'x' + str(height))
-        self.resizable(0, 0)
         print('window')        
         for column in columns:
             self.columnconfigure(columns.index(column), weight=column.weight)
@@ -21,8 +17,7 @@ class GridWindow(tkinter.Tk):
     #    grid.pack()
     #    self.__grid = grid
 
-    def render(self):
-        self.mainloop()
+
 
     #def add_component(self, factory, column, row):
     #    self.__grid.add_component(factory, column=column, row=row)
