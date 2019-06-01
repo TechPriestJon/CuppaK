@@ -6,7 +6,7 @@ class Grid(ttk.Frame):
         super().__init__(root, style = style, padding = padding)
         self.__components = []
 
-    def add_component(self, factory):
+    def add_component(self, factory, column, row):
         component = factory.build(self)
-        component.grid(column=1, row=1)
+        component.grid(column=column, row=row)
         self.__components.append(component)

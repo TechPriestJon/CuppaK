@@ -7,5 +7,5 @@ class ButtonFactory():
 
     def build(self, root):
         button = tkinter.Button(root, text="QUIT", fg="red")
-        button.pack()
+        #button.pack()
         return button
