@@ -1,8 +1,7 @@
 import tkinter
 from cuppak.window.screen import Screen
-from cuppak.window.subwindow import SubWindow
 
-class Window(tkinter.Tk):
+class SubWindow(tkinter.Toplevel):
     def __init__(self, width, height, title, **kw):
         super().__init__(**kw)   
         self.__screens = []  
@@ -13,7 +12,7 @@ class Window(tkinter.Tk):
         self.__height = height
         self.geometry(str(width) + 'x' + str(height))
         self.resizable(0, 0)
-        print('window')        
+        print('subwindow')        
 
     #def add_grid(self, factory, rows, columns):
     #    grid = factory.build(self, rows, columns)
@@ -33,7 +32,6 @@ class Window(tkinter.Tk):
 
     def load_screen(self, index=None, title=None):
         previous_screen = self.__screens[self.__current_screen]
-        previous_screen.close_subwindows()
         previous_screen.pack_forget()
         ##
         screen = self.__screens[index]
@@ -41,16 +39,10 @@ class Window(tkinter.Tk):
 
         self.__current_screen = index
 
-        ##or search using title
+    def get_screen(self):
+        return self.__screens[self.__current_screen]
 
-    def render(self):
-        self.mainloop()    
+        ##or search using title 
 
     def get_screen_function(self, index):
         return lambda: self.load_screen(index=index)
-
-    def spawn_subwindow(self, columns, rows, title):
-        subwindow = SubWindow(200, 250, 'SubWindow')
-        subwindow.add_screen(columns, rows, title)
-        subwindow.load_screen(0, 'screen2')
-        return subwindow
