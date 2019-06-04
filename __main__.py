@@ -2,7 +2,7 @@
 #import cuppak.window.window
 #from baconsarnie.io.window import Window
 from cuppak.window import *
-
+import sys, inspect
 from cuppak.component import *
 
 import tkinter
@@ -23,6 +23,18 @@ print('run')
 #cuppakwindow.add_component(ButtonFactory(), 1, 1)
 #cuppakwindow.add_component(ButtonFactory(), 2, 0)
 #cuppakwindow.add_component(ButtonFactory(), 0, 0)
+
+classes = inspect.getmembers(sys.modules[__name__], inspect.isclass)
+for classr in classes:
+    print(classr)
+
+classes = inspect.getmembers(sys.modules['tkinter'], inspect.isclass)
+for classr in classes:
+    print(classr)
+
+classes = inspect.getmembers(sys.modules['tkinter.ttk'], inspect.isclass)
+for classr in classes:
+    print(classr)
 
 cuppakwindow = Window(800, 600, 'CuppaK Anuva Cuppa')
 
