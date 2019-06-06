@@ -49,7 +49,12 @@ def loadsubwindow():
 frame2 = screen1.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, background='#000')
 
 frame2.add_component('Button', 0, 0, text='Dog2', command=loadsubwindow)
-frame2.add_component('Multiline', 1, 1, component_module='this', fill_frame=True)
+txtbx = frame2.add_component('Multiline', 1, 1, component_module='this', fill_frame=True)
+
+def printtxtbox():
+    print(txtbx.get_text())
+
+frame2.add_component('Button', 1, 2, text='Txt', command=printtxtbox)
 
 cuppakwindow.render()
 print('complete')
