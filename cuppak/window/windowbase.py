@@ -10,8 +10,8 @@ class WindowBase():
         self._height = height
         print('windowbase')        
 
-    def add_screen(self, columns, rows, title=None):
-        screen = Screen(self, columns,rows)
+    def add_screen(self, columns, rows, title=None, **kw):
+        screen = Screen(self, columns, rows, **kw)
         self._screens.append(screen)
 
         ##if null, set to index

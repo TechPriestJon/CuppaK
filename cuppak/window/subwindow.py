@@ -8,7 +8,8 @@ class SubWindow(tkinter.Toplevel, WindowBase):
         WindowBase.__init__(self, width, height)   
         self.title(title)
         self.geometry(str(self._width) + 'x' + str(self._height))
-        self.resizable(0, 0)
+        if isresizable == False:
+            self.resizable(0, 0)
         print('subwindow')    
 
 
