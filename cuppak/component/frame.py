@@ -56,4 +56,13 @@ class Frame(tkinter.Frame):
     def get_components(self):
         return self._grid.components
 
+    def change_child_state(self, state):
+        for child in self.winfo_children():
+            print(child)
+            print(str(type(child)))
+            if not str(type(child)).endswith('Frame\'>') and not str(type(child)).endswith('Multiline\'>'):
+                child.configure(state=state)
+            else:
+                child.change_child_state(state)
+
 
