@@ -36,6 +36,7 @@ def loadsubwindow():
 
     def on_closing():
         return messagebox.askokcancel("Quit", "Do you want to escape and run away?")
+        #return messagebox.askyesnocancel("Quit", "Do you want to escape and run away?")
 
     subwindow = screen1.spawn_subwindow('subwindow', 400, 200, False, True, on_closing)
 

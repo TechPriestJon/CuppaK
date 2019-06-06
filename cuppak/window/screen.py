@@ -17,7 +17,9 @@ class Screen(Frame):
         subwindow = self.master.spawn_subwindow(title, width, height, isresizable)
         if lockscreen:
             for child in self.winfo_children():
-                child.configure(state='disable')
+                if not str(type(child)).endswith('Frame\'>'):
+                    child.configure(state='disable')  
+                    ##need to loop through children                  
             
             #if self.__menu:
             #    self.__menu.entryconfig(state='disable')
@@ -26,7 +28,8 @@ class Screen(Frame):
                 if onclosing:
                     if onclosing():
                         for child in self.winfo_children():
-                            child.configure(state='normal')
+                            if not str(type(child)).endswith('Frame\'>'): 
+                                child.configure(state='normal')
                         subwindow.destroy()
 
                     else:
@@ -34,7 +37,8 @@ class Screen(Frame):
                 
                 else: 
                     for child in self.winfo_children():
-                        child.configure(state='normal') 
+                        if not str(type(child)).endswith('Frame\'>'): 
+                            child.configure(state='normal')
 
                     #if self.__menu:                        
                     #    self.__menu.entryconfig(state='normal')  
