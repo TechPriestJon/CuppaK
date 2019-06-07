@@ -30,12 +30,15 @@ monkiesview = tabframe1.add_tab('Monkies')
 monkiesview.config(bg='#000')
 elephantsview = tabframe1.add_tab('Elephants')
 elephantsview.config(bg='#FFF')
+tiggerview = tabframe1.add_tab('Tiger')
 
 frame4 = monkiesview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#000')
-frame4.add_component('Button', 1, 1,  text='ooo ah')
+frame4.add_component('Button', 0, 0, component_module='ttk', text='ooo ah')
 
-frame4 = elephantsview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#CCC')
-frame4.add_component('Button', 1, 1,  text='KILL MAIN BURN')
+frame7 = elephantsview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#CCC')
+frame7.add_component('Button', 0, 0,  text='KILL MAIN BURN')
+
+frame5 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#999')
 
 
 screen2.add_component('Button', 1, 1, text='Cat', command=cuppakwindow.get_screen_function(0))

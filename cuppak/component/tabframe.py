@@ -46,8 +46,8 @@ class TabFrame(Frame):
             tabrows = [RowDefinition(1)]   
 
         self._tabframe.alter_dimensions(tabcolumns, tabrows)
-        tab = self._tabframe.add_component('Button', (len(tabcolumns) - 1), (len(tabrows) - 1), text=text, \
-                    command=self._get_switch_tab_command(len(self._tabs)), fill_frame=True)
+        tab = self._tabframe.add_component('Button', (len(tabcolumns) - 1), (len(tabrows) - 1), component_module='ttk', \
+                text=text, command=self._get_switch_tab_command(len(self._tabs)), fill_frame=True)
 
         self._tabs.append(tab)
         
@@ -65,6 +65,8 @@ class TabFrame(Frame):
             view.grid_remove()
         else:
             self._currentview = view
+            #tab.config(relief='flat')
+            tab.state(['pressed'])
 
         return view
 
@@ -73,9 +75,12 @@ class TabFrame(Frame):
 
     def _switch_tab(self, index):
         self._currentview.grid_remove()
+        tab = self._tabs[self._views.index(self._currentview)]
+        tab.state(['!pressed'])
 
         self._currentview = self._views[index]
         self._currentview.grid(column=0, row=0, columnspan=1, sticky='nswe')
+        self._tabs[index].state(['pressed'])
 
         ##switchtab
     def get_tab_frame(self, index):
