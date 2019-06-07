@@ -1,6 +1,7 @@
-from cuppak.component.columndefinition import ColumnDefinition
-from cuppak.component.rowdefinition import RowDefinition
 from cuppak.component.frame import Frame
 from cuppak.component.multiline import Multiline
+from cuppak.component.horizontaltabframe import HorizontalTabFrame
+from cuppak.component.verticaltabframe import VerticalTabFrame
 
-__all__ = ["ColumnDefinition", "RowDefinition", "Frame", "Multiline"]
+
+__all__ = ["Frame", "Multiline", "HorizontalTabFrame", "VerticalTabFrame"]

@@ -8,19 +8,13 @@ class Frame(tkinter.Frame):
     def __init__(self, window, columns, rows, **kw):
         super().__init__(window, **kw)  
         self._components = []    
-        self._columns = len(columns)    
-        self._rows = len(rows)     
-        print('frame')        
-        for column in columns:
-            self.columnconfigure(columns.index(column), weight=column.weight)
+        print('frame')       
+        self.alter_dimensions(columns, rows) 
 
-        for row in rows:
-            self.rowconfigure(rows.index(row), weight=row.weight)
-
-
-    def add_component(self, component_type, column, row, component_module='tkinter', fill_frame=False, **kw):
+    def add_component(self, component_type, column, row, component_module='tkinter', fill_frame=False, **kw): 
         if column >= self._columns:
             raise ValueError('Column is outside range of screen columns')
+            
         if row >= self._rows:
             raise ValueError('Row is outside range of screen rows')    
         
@@ -38,7 +32,7 @@ class Frame(tkinter.Frame):
 
         if component_module == 'tkinter':
             component_inst = getattr(tkinter, component_type)
-        elif component_module == 'tkinter.ttk':
+        elif component_module == 'ttk':
             component_inst = getattr(tkinter.ttk, component_type)
         else:
             component_inst = getattr(cuppak.component, component_type)
@@ -64,5 +58,14 @@ class Frame(tkinter.Frame):
                 child.configure(state=state)
             else:
                 child.change_child_state(state)
+
+    def alter_dimensions(self, columns, rows):
+        self._columns = len(columns) 
+        self._rows = len(rows)           
+        for column in columns:
+            self.columnconfigure(columns.index(column), weight=column.weight)
+
+        for row in rows:
+            self.rowconfigure(rows.index(row), weight=row.weight)
 
 

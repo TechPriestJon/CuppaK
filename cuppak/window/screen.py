@@ -16,8 +16,7 @@ class Screen(Frame):
     def spawn_subwindow(self, title, width, height, isresizable=True, lockscreen=False, onclosing=False):
         subwindow = self.master.spawn_subwindow(title, width, height, isresizable)
         if lockscreen:
-            self.change_child_state('disable') 
-                    ##need to loop through children                  
+            self.change_child_state('disable')                 
             
             #if self.__menu:
             #    self.__menu.entryconfig(state='disable')

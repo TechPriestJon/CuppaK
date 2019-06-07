@@ -1,6 +1,7 @@
 import tkinter
 import cuppak.component
 from cuppak.component import *
+from cuppak.dto import *
 
 class Multiline(Frame):
     def __init__(self, window, **kw):
