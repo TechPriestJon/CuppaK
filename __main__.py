@@ -32,18 +32,35 @@ elephantsview = tabframe1.add_tab('Elephants')
 elephantsview.config(bg='#FFF')
 tiggerview = tabframe1.add_tab('Tiger')
 
+frame10 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=[ColumnDefinition(1)], rows=[ColumnDefinition(1)])
+
+slider2 = frame10.add_component('SliderFrame', 0, 0, component_module='this', fill_frame=True)
+slider2.set_to(200)
+slider2.set_from(-300)
+#frame10.add_component('Button', 0, 0, component_module='ttk', text='acc')
+
+
 frame4 = monkiesview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#000')
 frame4.add_component('Button', 0, 0, component_module='ttk', text='ooo ah')
 
 frame7 = elephantsview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#CCC')
 frame7.add_component('Button', 0, 0,  text='KILL MAIN BURN')
 
-frame5 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#999')
+#frame5 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#999')
 
 
-screen2.add_component('Button', 1, 1, text='Cat', command=cuppakwindow.get_screen_function(0))
+screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this')
 screen2.add_component('Button', 2, 0, text='Hamster', command=cuppakwindow.get_screen_function(title='screen1'))
+slider = screen2.add_component('SliderFrame', 0, 1, component_module='this', fill_frame=True)
+slider.set_to(1000)
+slider.set_from(-50)
+
+
+screen2.add_component('TextEntryFrame', 2, 1, component_module='this', fill_frame=True)
+
 screen2.add_component('Button', 0, 0, text='Birb', command=cuppakwindow.get_screen_function(title='screen1'))
+
+
 
 def loadsubwindow():
     columns = [ColumnDefinition(2), ColumnDefinition(1), ColumnDefinition(4)]
@@ -65,7 +82,7 @@ def loadsubwindow():
 frame2 = screen1.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, background='#000')
 
 frame2.add_component('Button', 0, 0, text='Dog2', command=loadsubwindow)
-txtbx = frame2.add_component('Multiline', 1, 1, component_module='this', fill_frame=True)
+txtbx = frame2.add_component('MultilineFrame', 1, 1, component_module='this', fill_frame=True)
 
 def printtxtbox():
     print(txtbx.get_text())
