@@ -3,8 +3,10 @@ from tkinter import ttk
 import sys, inspect
 from cuppak.component.frame import Frame
 from cuppak.dto import *
+from abc import ABC, abstractmethod
 
-class TabFrame(Frame):
+class TabFrame(Frame, ABC):
+    @abstractmethod
     def __init__(self, window, columns, rows, **kw):
         super().__init__(window, columns, rows)
         self._tabs = []

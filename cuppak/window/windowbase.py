@@ -1,7 +1,10 @@
 import tkinter
 from cuppak.window.screen import Screen
+from abc import ABC, abstractmethod
 
 class WindowBase():
+    
+    @abstractmethod
     def __init__(self, width, height):
         self._screens = []  
         self._screen_titles = []    

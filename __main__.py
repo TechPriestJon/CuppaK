@@ -31,10 +31,11 @@ monkiesview.config(bg='#000')
 elephantsview = tabframe1.add_tab('Elephants')
 elephantsview.config(bg='#FFF')
 tiggerview = tabframe1.add_tab('Tiger')
+cowview = tabframe1.add_tab('Cow')
 
 frame10 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=[ColumnDefinition(1)], rows=[ColumnDefinition(1)])
 
-slider2 = frame10.add_component('SliderFrame', 0, 0, component_module='this', fill_frame=True)
+slider2 = frame10.add_component('IntegerSliderFrame', 0, 0, component_module='this', fill_frame=True)
 slider2.set_max(200)
 slider2.set_min(-300)
 slider2.set_value(-150)
@@ -47,12 +48,20 @@ frame4.add_component('Button', 0, 0, component_module='ttk', text='ooo ah')
 frame7 = elephantsview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#CCC')
 frame7.add_component('Button', 0, 0,  text='KILL MAIN BURN')
 
+frame11 = cowview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=[ColumnDefinition(1)], rows=[ColumnDefinition(1)])
+
+slider2 = frame11.add_component('FloatSliderFrame', 0, 0, component_module='this', fill_frame=True)
+slider2.set_max(200)
+slider2.set_min(-300)
+slider2.set_value(-150)
+
+
 #frame5 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#999')
 
 
-screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this')
+screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this', text='Some words', fill_frame=True)
 screen2.add_component('Button', 2, 0, text='Hamster', command=cuppakwindow.get_screen_function(title='screen1'))
-slider = screen2.add_component('SliderFrame', 0, 1, component_module='this', fill_frame=True)
+slider = screen2.add_component('IntegerSliderFrame', 0, 1, component_module='this', fill_frame=True)
 slider.set_max(1000)
 slider.set_min(-50)
 

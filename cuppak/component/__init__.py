@@ -3,9 +3,11 @@ from cuppak.component.multilineframe import MultilineFrame
 from cuppak.component.dynamiclabelframe import DynamicLabelFrame
 from cuppak.component.textentryframe import TextEntryFrame
 from cuppak.component.sliderframe import SliderFrame
+from cuppak.component.integersliderframe import IntegerSliderFrame
+from cuppak.component.floatsliderframe import FloatSliderFrame
 from cuppak.component.horizontaltabframe import HorizontalTabFrame
 from cuppak.component.verticaltabframe import VerticalTabFrame
+from cuppak.component.tabframe import TabFrame
 
-
-__all__ = ["Frame", "MultilineFrame", "HorizontalTabFrame", "VerticalTabFrame", \
-            "DynamicLabelFrame", "TextEntryFrame", "SliderFrame"]
+__all__ = ["Frame", "MultilineFrame", "TabFrame", "HorizontalTabFrame", "VerticalTabFrame", \
+            "DynamicLabelFrame", "TextEntryFrame", "SliderFrame", "IntegerSliderFrame", "FloatSliderFrame"]
