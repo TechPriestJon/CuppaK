@@ -35,10 +35,11 @@ tiggerview = tabframe1.add_tab('Tiger')
 frame10 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=[ColumnDefinition(1)], rows=[ColumnDefinition(1)])
 
 slider2 = frame10.add_component('SliderFrame', 0, 0, component_module='this', fill_frame=True)
-slider2.set_to(200)
-slider2.set_from(-300)
+slider2.set_max(200)
+slider2.set_min(-300)
+slider2.set_value(-150)
 #frame10.add_component('Button', 0, 0, component_module='ttk', text='acc')
-
+print(slider2.get_value())
 
 frame4 = monkiesview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#000')
 frame4.add_component('Button', 0, 0, component_module='ttk', text='ooo ah')
@@ -52,8 +53,8 @@ frame7.add_component('Button', 0, 0,  text='KILL MAIN BURN')
 screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this')
 screen2.add_component('Button', 2, 0, text='Hamster', command=cuppakwindow.get_screen_function(title='screen1'))
 slider = screen2.add_component('SliderFrame', 0, 1, component_module='this', fill_frame=True)
-slider.set_to(1000)
-slider.set_from(-50)
+slider.set_max(1000)
+slider.set_min(-50)
 
 
 screen2.add_component('TextEntryFrame', 2, 1, component_module='this', fill_frame=True)
