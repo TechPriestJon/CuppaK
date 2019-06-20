@@ -5,3 +5,5 @@ __pycache__
 /cuppak/dto/__pycache__
 /cuppak/tests/__pycache__
 /cuppak/window/__pycache__
+.pytest_cache
+.pytest_cache/*
