@@ -8,6 +8,8 @@ from cuppak.component.floatsliderframe import FloatSliderFrame
 from cuppak.component.horizontaltabframe import HorizontalTabFrame
 from cuppak.component.verticaltabframe import VerticalTabFrame
 from cuppak.component.tabframe import TabFrame
+from cuppak.component.comboboxframe import ComboboxFrame
 
 __all__ = ["Frame", "MultilineFrame", "TabFrame", "HorizontalTabFrame", "VerticalTabFrame", \
-            "DynamicLabelFrame", "TextEntryFrame", "SliderFrame", "IntegerSliderFrame", "FloatSliderFrame"]
+            "DynamicLabelFrame", "TextEntryFrame", "SliderFrame", "IntegerSliderFrame", \
+            "FloatSliderFrame", "ComboboxFrame"]

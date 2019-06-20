@@ -54,7 +54,10 @@ class Frame(tkinter.Frame):
         for child in self.winfo_children():
             print(child)
             print(str(type(child)))
-            if not str(type(child)).endswith('Frame\'>') and not str(type(child)).endswith('Multiline\'>'):
+            if str(type(child)).endswith('Scale\'>') or str(type(child)).endswith('tkinter.Frame\'>'):
+                return
+
+            if not str(type(child)).endswith('Frame\'>'):
                 child.configure(state=state)
             else:
                 child.change_child_state(state)

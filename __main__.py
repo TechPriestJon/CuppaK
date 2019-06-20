@@ -45,8 +45,12 @@ print(slider2.get_value())
 frame4 = monkiesview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#000')
 frame4.add_component('Button', 0, 0, component_module='ttk', text='ooo ah')
 
+
+cmbvalues = ['Some','Values','Here']
+
 frame7 = elephantsview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#CCC')
-frame7.add_component('Button', 0, 0,  text='KILL MAIN BURN')
+combobox = frame7.add_component('ComboboxFrame', 0, 0, component_module='this', fill_frame=True, choices=cmbvalues, state='readonly')
+print(combobox.get_value())
 
 frame11 = cowview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=[ColumnDefinition(1)], rows=[ColumnDefinition(1)])
 
