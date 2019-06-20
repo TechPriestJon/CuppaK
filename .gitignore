@@ -1,0 +1,7 @@
+#ignore pycache
+__pycache__
+/cuppak/__pycache__
+/cuppak/component/__pycache__
+/cuppak/dto/__pycache__
+/cuppak/tests/__pycache__
+/cuppak/window/__pycache__
