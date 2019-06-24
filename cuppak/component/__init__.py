@@ -9,7 +9,11 @@ from cuppak.component.horizontaltabframe import HorizontalTabFrame
 from cuppak.component.verticaltabframe import VerticalTabFrame
 from cuppak.component.tabframe import TabFrame
 from cuppak.component.comboboxframe import ComboboxFrame
+from cuppak.component.treeviewframe import TreeviewFrame
+from cuppak.component.verticalselectorframe import VerticalSelectorFrame
+from cuppak.component.horizontalselectorframe import HorizontalSelectorFrame
 
 __all__ = ["Frame", "MultilineFrame", "TabFrame", "HorizontalTabFrame", "VerticalTabFrame", \
             "DynamicLabelFrame", "TextEntryFrame", "SliderFrame", "IntegerSliderFrame", \
-            "FloatSliderFrame", "ComboboxFrame"]
+            "FloatSliderFrame", "ComboboxFrame", 'TreeviewFrame', \
+            'HorizontalSelectorFrame', 'VerticalSelectorFrame']

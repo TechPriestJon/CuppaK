@@ -74,6 +74,14 @@ screen2.add_component('TextEntryFrame', 2, 1, component_module='this', fill_fram
 
 screen2.add_component('Button', 0, 0, text='Birb', command=cuppakwindow.get_screen_function(title='screen1'))
 
+frame1.add_component('TreeviewFrame', 0, 1,  component_module='this', fill_frame=True)
+
+radio_buttons = [RadioButtonDefinition('abc', 'value1'), RadioButtonDefinition('dfg', 'value2'), RadioButtonDefinition('hij', 'value3')]
+
+
+frame1.add_component('HorizontalSelectorFrame', 0, 2,  component_module='this', radio_buttons=radio_buttons, fill_frame=True)
+
+frame1.add_component('VerticalSelectorFrame', 1, 2,  component_module='this', radio_buttons=radio_buttons, fill_frame=True)
 
 
 def loadsubwindow():
