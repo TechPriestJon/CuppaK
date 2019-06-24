@@ -26,4 +26,6 @@ class TreeviewFrame(Frame):
         self._treeview.insert(id2, "end", "dir 2", text="sub dir 2", values=("2A","2B"))
         self._treeview.grid(column=0, row=0, columnspan=1, sticky='nswe')  
 
+    
+
 

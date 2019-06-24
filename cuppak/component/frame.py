@@ -54,7 +54,8 @@ class Frame(tkinter.Frame):
         for child in self.winfo_children():
             print(child)
             print(str(type(child)))
-            if str(type(child)).endswith('Scale\'>') or str(type(child)).endswith('tkinter.Frame\'>'):
+            if str(type(child)).endswith('Scale\'>') or str(type(child)).endswith('tkinter.Frame\'>') \
+                or str(type(child)).endswith('ttk.Treeview\'>'):
                 return
 
             if not str(type(child)).endswith('Frame\'>'):
