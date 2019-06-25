@@ -1,7 +1,8 @@
 import pytest
+#from CuppaK import conftests
+#import conftests
+#from conftests import *
 
-def test_return_true():
-    assert True == True
-
-def test_return_false():
-    assert False == True
+def window_opens():
+    window = Window('ABC', 10, 10, False)
+    assert window
