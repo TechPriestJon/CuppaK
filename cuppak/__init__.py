@@ -2,4 +2,4 @@
 
 #__all__ = ["window", "MainWindow"]
 
-__all__ = ["window", "component"]
+__all__ = ['window', 'component', 'dto']

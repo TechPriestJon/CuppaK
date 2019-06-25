@@ -74,7 +74,19 @@ screen2.add_component('TextEntryFrame', 2, 1, component_module='this', fill_fram
 
 screen2.add_component('Button', 0, 0, text='Birb', command=cuppakwindow.get_screen_function(title='screen1'))
 
-frame1.add_component('TreeviewFrame', 0, 1,  component_module='this', fill_frame=True)
+treecolumns = [TreeviewColumnDefinition('one', 'column A', 125), TreeviewColumnDefinition('two', 'column B', 75)]
+
+treeframe = frame1.add_component('TreeviewFrame', 0, 1, columns=treecolumns, component_module='this', fill_frame=True)
+
+row1 = TreeviewItemDefinition('The First Line', values=[TreeviewItemValueDefinition('two','2nd'), TreeviewItemValueDefinition('one','1st')])
+treeframe._add_item(row1)
+
+row2 = TreeviewItemDefinition('The Second Line', values=[TreeviewItemValueDefinition('one','3rd'), TreeviewItemValueDefinition('two','4th')])
+command_a = lambda: print('command fired')
+row3 = TreeviewItemDefinition('Another sub Line', values=[TreeviewItemValueDefinition('two','Dogs'), TreeviewItemValueDefinition('one','Cats')], command=command_a)
+
+directry = TreeviewDirectoryDefinition('dire','Folder A', items=[row2,row3])
+treeframe._add_directory(directry)
 
 radio_buttons = [RadioButtonDefinition('abc', 'value1'), RadioButtonDefinition('dfg', 'value2'), RadioButtonDefinition('hij', 'value3')]
 

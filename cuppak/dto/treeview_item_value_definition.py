@@ -1,4 +1,4 @@
-class TreeviewValueDefinition():
+class TreeviewItemValueDefinition():
     def __init__(self, key, value):
         self.key = key
         self.value = value
