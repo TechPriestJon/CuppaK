@@ -95,6 +95,17 @@ frame1.add_component('HorizontalSelectorFrame', 0, 2,  component_module='this', 
 
 frame1.add_component('VerticalSelectorFrame', 1, 2,  component_module='this', radio_buttons=radio_buttons, fill_frame=True)
 
+checkboxa = None
+
+def getbox():
+    print(checkboxa.get_value())
+
+def randomfunc():
+    print('buttontriggered')    
+
+checkboxa = frame1.add_component('CheckboxFrame', 2, 2,  component_module='this', label='Click', onvalue='Y', offvalue='N', command=getbox, fill_frame=True)
+checkboxa = frame1.add_component('ButtonFrame', 1, 0,  component_module='this', label='Click Me Button', command=randomfunc, fill_frame=True)
+
 
 def loadsubwindow():
     columns = [ColumnDefinition(2), ColumnDefinition(1), ColumnDefinition(4)]
