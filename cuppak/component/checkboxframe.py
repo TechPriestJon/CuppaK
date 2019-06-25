@@ -23,3 +23,6 @@ class CheckboxFrame(AbstractFrame):
 
     def get_value(self):
         return self._checkbox_value.get().strip()
+
+    def change_child_state(self, state):
+        super().change_child_state(state)

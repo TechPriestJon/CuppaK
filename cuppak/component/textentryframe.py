@@ -16,3 +16,5 @@ class TextEntryFrame(AbstractFrame):
     def get_text(self):
         return self._text.get('1.0','end').strip()
 
+    def change_child_state(self, state):
+        super().change_child_state(state)

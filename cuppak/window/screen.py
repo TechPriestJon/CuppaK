@@ -46,3 +46,7 @@ class Screen(Frame):
             subwindow.destroy()  
 
 
+    def change_child_state(self, state):
+        super().change_child_state(state)
+
+

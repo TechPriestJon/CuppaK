@@ -101,3 +101,13 @@ class SliderFrame(AbstractFrame, ABC):
     @abstractmethod
     def _create_entry(self):
         pass
+
+    def change_child_state(self, state):
+        super().change_child_state(state)
+        if state == 'disable':
+            self._scale.state(['disabled'])
+        else:
+            self._scale.state(['!disabled'])
+
+        self._text.configure(state=state)
+        

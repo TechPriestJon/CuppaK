@@ -48,4 +48,6 @@ class Frame(AbstractFrame):
     def alter_dimensions(self, columns, rows):
         self._alter_dimensions(columns, rows)
 
+    def change_child_state(self, state):
+        super().change_child_state(state)
 

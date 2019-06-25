@@ -57,7 +57,8 @@ class TreeviewFrame(AbstractFrame):
                     command()
                 break
 
-
+    def change_child_state(self, state):
+        super().change_child_state(state)
 
 
 

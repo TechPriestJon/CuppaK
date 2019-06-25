@@ -20,3 +20,6 @@ class MultilineFrame(AbstractFrame):
     def set_text(self, text):
         self._text.insert('1.0', text)
 
+    def change_child_state(self, state):
+        super().change_child_state(state)
+        self._text.configure(state=state)

@@ -63,7 +63,7 @@ slider2.set_value(-150)
 #frame5 = tiggerview.add_component('Frame', 0, 0, component_module='this', fill_frame=True, columns=columnsa, rows=rowsb, bg='#999')
 
 
-screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this', text='Some words', fill_frame=True)
+screen2.add_component('DynamicLabelFrame', 1, 1,  component_module='this', text='Some words',  image='arrow.png', fill_frame=True, compound='left')
 screen2.add_component('Button', 2, 0, text='Hamster', command=cuppakwindow.get_screen_function(title='screen1'))
 slider = screen2.add_component('IntegerSliderFrame', 0, 1, component_module='this', fill_frame=True)
 slider.set_max(1000)
@@ -104,7 +104,7 @@ def randomfunc():
     print('buttontriggered')    
 
 checkboxa = frame1.add_component('CheckboxFrame', 2, 2,  component_module='this', label='Click', onvalue='Y', offvalue='N', command=getbox, fill_frame=True)
-checkboxa = frame1.add_component('ButtonFrame', 1, 0,  component_module='this', label='Click Me Button', command=randomfunc, fill_frame=True)
+frame1.add_component('ButtonFrame', 1, 0,  component_module='this', label='Click Me Button', command=randomfunc, image='arrow.png', fill_frame=True, compound='bottom')
 
 
 def loadsubwindow():

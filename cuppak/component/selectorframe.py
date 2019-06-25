@@ -30,3 +30,7 @@ class SelectorFrame(AbstractFrame, ABC):
         return ttk.Radiobutton(self, text=text, variable=self._selector_value, value=value, **kw)
 
 
+    def change_child_state(self, state):
+        super().change_child_state(state)
+
+        
