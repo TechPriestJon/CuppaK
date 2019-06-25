@@ -5,8 +5,9 @@ import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
 from abc import ABC, abstractmethod
+from cuppak.component.abstractframe import AbstractFrame
 
-class SelectorFrame(Frame, ABC):
+class SelectorFrame(AbstractFrame, ABC):
     @abstractmethod
     def __init__(self, window, columns, rows, radio_buttons, **kw):
         super().__init__(window, columns, rows)

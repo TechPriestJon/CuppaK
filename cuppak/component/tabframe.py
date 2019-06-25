@@ -4,6 +4,7 @@ import sys, inspect
 from cuppak.component.frame import Frame
 from cuppak.dto import *
 from abc import ABC, abstractmethod
+from cuppak.component.abstractframe import AbstractFrame
 
 class TabFrame(Frame, ABC):
     @abstractmethod

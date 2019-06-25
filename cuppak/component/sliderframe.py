@@ -5,8 +5,9 @@ import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
 from abc import ABC, abstractmethod
+from cuppak.component.abstractframe import AbstractFrame
 
-class SliderFrame(Frame, ABC):
+class SliderFrame(AbstractFrame, ABC):
     def __init__(self, window, min=0, max=0, value=0, **kw):
         column = [ColumnDefinition(1), ColumnDefinition(1), ColumnDefinition(1)]
         row = [RowDefinition(10), RowDefinition(1), RowDefinition(10)]

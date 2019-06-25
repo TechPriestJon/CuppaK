@@ -3,8 +3,9 @@ import tkinter.scrolledtext as tkscr
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
+from cuppak.component.abstractframe import AbstractFrame
 
-class MultilineFrame(Frame):
+class MultilineFrame(AbstractFrame):
     def __init__(self, window, **kw):
         column = [ColumnDefinition(1)]
         row = [RowDefinition(1)]

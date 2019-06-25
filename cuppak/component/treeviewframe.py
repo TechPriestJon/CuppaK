@@ -3,8 +3,9 @@ from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
+from cuppak.component.abstractframe import AbstractFrame
 
-class TreeviewFrame(Frame):
+class TreeviewFrame(AbstractFrame):
     def __init__(self, window, columns=[], **kw):
         column = [ColumnDefinition(1)]
         row = [RowDefinition(1)]

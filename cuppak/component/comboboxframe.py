@@ -3,8 +3,9 @@ from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
+from cuppak.component.abstractframe import AbstractFrame
 
-class ComboboxFrame(Frame):
+class ComboboxFrame(AbstractFrame):
     def __init__(self, window, choices=None, default_index=0, **kw):
         column = [ColumnDefinition(1)]
         row = [RowDefinition(1)]

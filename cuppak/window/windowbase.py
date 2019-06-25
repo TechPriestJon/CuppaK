@@ -2,8 +2,7 @@ import tkinter
 from cuppak.window.screen import Screen
 from abc import ABC, abstractmethod
 
-class WindowBase():
-    
+class WindowBase(ABC):    
     @abstractmethod
     def __init__(self, width, height):
         self._screens = []  

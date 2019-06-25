@@ -3,8 +3,9 @@ from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
+from cuppak.component.abstractframe import AbstractFrame
 
-class DynamicLabelFrame(Frame):
+class DynamicLabelFrame(AbstractFrame):
     def __init__(self, window, text='', **kw):
         column = [ColumnDefinition(1)]
         row = [RowDefinition(1)]
