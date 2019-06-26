@@ -3,7 +3,7 @@ from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class ComboboxFrame(AbstractFrame):
     def __init__(self, window, choices=None, default_index=0, **kw):

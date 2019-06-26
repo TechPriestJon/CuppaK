@@ -1,6 +1,6 @@
 import tkinter
 from cuppak.window.screen import Screen
-from cuppak.window.windowbase import WindowBase
+from cuppak.window.window_base import WindowBase
 
 class SubWindow(tkinter.Toplevel, WindowBase):
     def __init__(self, title, width, height, isresizable=True, **kw):

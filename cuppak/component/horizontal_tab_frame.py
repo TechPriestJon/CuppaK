@@ -1,7 +1,7 @@
 import tkinter
 from tkinter import ttk
 import sys, inspect
-from cuppak.component.tabframe import TabFrame
+from cuppak.component.tab_frame import TabFrame
 from cuppak.dto import *
 
 class HorizontalTabFrame(TabFrame):

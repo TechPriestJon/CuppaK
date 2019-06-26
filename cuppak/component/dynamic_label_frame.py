@@ -4,7 +4,7 @@ import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
 from PIL import Image, ImageTk
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class DynamicLabelFrame(AbstractFrame):
     def __init__(self, window, text='', image=None, **kw):

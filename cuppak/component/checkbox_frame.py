@@ -4,7 +4,7 @@ import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
 from tkinter import *
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class CheckboxFrame(AbstractFrame):
     def __init__(self, window, label='', onvalue='', offvalue='', command=None, **kw):

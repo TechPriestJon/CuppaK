@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
-from cuppak.component.selectorframe import SelectorFrame
+from cuppak.component.selector_frame import SelectorFrame
 from cuppak.dto import *
 
 class VerticalSelectorFrame(SelectorFrame):

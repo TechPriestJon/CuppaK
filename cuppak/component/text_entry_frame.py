@@ -3,7 +3,7 @@ from tkinter import ttk
 import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class TextEntryFrame(AbstractFrame):
     def __init__(self, window, **kw):

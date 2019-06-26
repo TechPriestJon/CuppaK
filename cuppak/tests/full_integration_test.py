@@ -7,9 +7,7 @@ from cuppak.component import *
 from cuppak.dto import *
 
 
-def test_run_window():
-    print('run')
-
+def test_integration():
     cuppakwindow = Window('CuppaK Anuva Cuppa', 800, 600, False)
 
     screen1 =  cuppakwindow.add_screen([ColumnDefinition(2), ColumnDefinition(1)], [RowDefinition(1)], 'screen1')

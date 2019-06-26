@@ -5,7 +5,7 @@ import cuppak.component
 from cuppak.component import *
 from cuppak.dto import *
 from abc import ABC, abstractmethod
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class SelectorFrame(AbstractFrame, ABC):
     @abstractmethod

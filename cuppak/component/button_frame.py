@@ -5,7 +5,7 @@ from cuppak.component import *
 from cuppak.dto import *
 from tkinter import *
 from PIL import Image, ImageTk
-from cuppak.component.abstractframe import AbstractFrame
+from cuppak.component.abstract_frame import AbstractFrame
 
 class ButtonFrame(AbstractFrame):
     def __init__(self, window, label='', command=None, image=None, **kw):

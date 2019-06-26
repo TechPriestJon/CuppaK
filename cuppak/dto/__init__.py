@@ -1,5 +1,5 @@
-from cuppak.dto.columndefinition import ColumnDefinition
-from cuppak.dto.rowdefinition import RowDefinition
+from cuppak.dto.column_definition import ColumnDefinition
+from cuppak.dto.row_definition import RowDefinition
 from cuppak.dto.radio_button_definition import RadioButtonDefinition
 
 from cuppak.dto.treeview_column_definition import TreeviewColumnDefinition
