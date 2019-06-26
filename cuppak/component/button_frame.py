@@ -17,7 +17,7 @@ class ButtonFrame(AbstractFrame):
         self._button.grid(column=0, row=0, columnspan=1, sticky='nesw')
 
     def set_button(self, label, image=None, command=None, **kw):
-        self._create_label(label, image, command, **kw)
+        self._create_button(label, image, command, **kw)
 
     def _create_button(self, label, image=None, command=None, **kw):
         if image:

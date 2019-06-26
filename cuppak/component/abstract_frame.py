@@ -1,8 +1,5 @@
 import tkinter
-from tkinter import ttk
 import sys, inspect
-import cuppak
-import cuppak.component
 from abc import ABC, abstractmethod
 
 class AbstractFrame(tkinter.Frame, ABC):
@@ -10,7 +7,6 @@ class AbstractFrame(tkinter.Frame, ABC):
     def __init__(self, window, columns, rows, **kw):
         super().__init__(window, **kw)  
         self._components = []    
-        print('frame')       
         self._alter_dimensions(columns, rows) 
 
     def get_components(self):
