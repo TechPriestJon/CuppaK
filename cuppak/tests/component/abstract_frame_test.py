@@ -17,9 +17,29 @@ def test_abstract_frame_not_instantiatable():
     except TypeError as error:
         assert str(error) == expected_error
 
-def test_abstract_frame_get_components():
-    assert False
+def test_abstract_frame_can_instantiate_concrete():
+    concrete_frame = ConcreteAbstractFrame(None, [], [])
+    assert concrete_frame
+
+def test_abstract_frame_handles_invalid_columns_parameters():
+    expected_error = 'columns must be a list'
+    try:
+        concrete_frame = ConcreteAbstractFrame(None, 1, [])
+        assert False
+    except TypeError as error:
+        assert str(error) == expected_error
+
+def test_abstract_frame_handles_invalid_rows_parameters():
+    expected_error = 'rows must be a list'
+    try:
+        concrete_frame = ConcreteAbstractFrame(None, [], 'dog')
+        assert False
+    except TypeError as error:
+        assert str(error) == expected_error
 
 def test_abstract_frame_alter_dimensions():
+    rows = []
+    columns = []
+
     assert False
 
