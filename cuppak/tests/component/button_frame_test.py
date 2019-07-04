@@ -3,9 +3,11 @@ from cuppak.component import *
 import os
 
 def test_button_frame_type():
+    component_type = "<class 'cuppak.component.button_frame.ButtonFrame'>"
+    inner_component_type = "<class 'tkinter.ttk.Button'>"
     button = ButtonFrame(None, 'Test Button')
-    assert str(type(button)) == "<class 'cuppak.component.button_frame.ButtonFrame'>"
-    assert str(type(button._button)) == "<class 'tkinter.ttk.Button'>"
+    assert str(type(button)) == component_type
+    assert str(type(button._button)) == inner_component_type
 
 def test_button_frame_text():
     button = ButtonFrame(None, 'Test Button')

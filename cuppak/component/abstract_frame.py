@@ -26,11 +26,8 @@ class AbstractFrame(tkinter.Frame, ABC):
                 return
 
             if not str(type(child)).endswith('Frame\'>'):
-                print('child:' + str(type(child)))
                 child.configure(state=state)
             else:
-                print(child)
-                print(str(type(child)))
                 child.change_child_state(state)
 
     def _alter_dimensions(self, columns, rows):

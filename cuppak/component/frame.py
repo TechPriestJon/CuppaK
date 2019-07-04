@@ -9,7 +9,7 @@ class Frame(AbstractFrame):
     def __init__(self, window, columns, rows, **kw):
         super().__init__(window, columns, rows, **kw)  
 
-    def add_component(self, component_type, column, row, component_module='tkinter', fill_frame=False, **kw): 
+    def add_component(self, component_type, column, row, component_module='tkinter', fill_frame=False, sticky=None, **kw): 
         if column >= self._columns:
             raise ValueError('Column is outside range of screen columns')
             
@@ -40,7 +40,13 @@ class Frame(AbstractFrame):
         if fill_frame:
             component.grid(column=column, row=row, columnspan=1, sticky='nswe')
         else:
-            component.grid(column=column, row=row)
+            if sticky:
+                if not isinstance(sticky, str):
+                    raise TypeError('Parameter sticky needs to be a string')
+
+                component.grid(column=column, row=row, columnspan=1, sticky=sticky)
+            else:
+                component.grid(column=column, row=row)
 
         self._components.append(component)  
         return component
