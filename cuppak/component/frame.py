@@ -2,7 +2,6 @@ import tkinter
 from tkinter import ttk
 import sys, inspect
 import cuppak
-import cuppak.component
 from cuppak.component.abstract_frame import AbstractFrame
 
 class Frame(AbstractFrame):

@@ -1,6 +1,5 @@
 import tkinter
 import sys, inspect
-from array import array
 from abc import ABC, abstractmethod
 
 class AbstractFrame(tkinter.Frame, ABC):
